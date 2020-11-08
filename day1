@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>heading</title>
+    </head>
+    <body>
+        <input type="text" id="1">
+        <br>
+        <button onclick="disp()">
+            click me
+        </button>
+        <p id="para">Initial value</p>
+    </body>
+</html>
+
+<script>
+
+function disp() {
+    //console.log("hello");
+    let val = document.getElementById("1").value;
+    let s = 1;
+    for(var i = 1; i <= val; i++) {
+        s = s * i;
+    }
+    let a = [0,1,2,3,4];
+    a.forEach( i =>{
+        console.log(i);
+    })
+    console.log(a.filter( i => i%2 == 0 ))
+    document.getElementById("para").innerHTML = l+val+" is "+s;
+    let l = "The factorial of ";
+
+}
+
+</script>
+
