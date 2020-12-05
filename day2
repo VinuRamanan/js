@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>heading</title>
+    </head>
+    <body>
+        <input type="text" id="1">
+        <br>
+        <button onclick="variables()">
+            click me
+        </button>
+        <p id="para">Initial value</p>
+    </body>
+</html>
+
+<script>
+
+function disp() {
+    //console.log("hello");
+    let val = document.getElementById("1").value;
+    let s = 1;
+    for(var i = 1; i <= val; i++) {
+        s = s * i;
+    }
+    let a = [0,1,2,3,4];
+    a.forEach( i =>{
+        console.log(i);
+    })
+    console.log(a.filter( i => i%2 == 0 ))
+    document.getElementById("para").innerHTML = l+val+" is "+s;
+    var l = "The factorial of ";
+
+}
+
+function my_func() {
+    //arraylist -> list
+    // ashmap -> class
+    a = 100
+    var a;
+    b = 10;
+    let b;
+    console.log(b)
+    console.log(a)
+    var my_list = [];
+    my_list.push(1);
+    my_list.push("lavan");
+     my_list.push({
+        'name': 'lavan',
+        'gender': 'female'
+    });
+    my_list.push([
+        1,2,3
+    ]);
+    console.log(my_list);
+    console.log(my_list[2].name);
+    console.log(my_list[2]['name']);
+    const s = 1;
+    console.log('"hello world" is the first program to any language');
+    
+}
+
+function variables() {
+    let a = 5;
+    {
+        var a;
+        console.log(a);
+    }
+    console.log(a);
+}
+
+</script>
