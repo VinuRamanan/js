@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <title>heading</title>
+    </head>
+    <body>
+        <input type="text" id="1">
+        <br>
+        <button onclick="day3()">
+            click me
+        </button>
+        <p id="para">Initial value</p>
+    </body>
+</html>
+
+<script>
+
+function disp() {
+    //console.log("hello");
+    let val = document.getElementById("1").value;
+    let s = 1;
+    for(var i = 1; i <= val; i++) {
+        s = s * i;
+    }
+    let a = [0,1,2,3,4];
+    a.forEach( i =>{
+        console.log(i);
+    })
+    console.log(a.filter( i => i%2 == 0 ))
+    document.getElementById("para").innerHTML = l+val+" is "+s;
+    var l = "The factorial of ";
+
+}
+
+function my_func() {
+    //arraylist -> list
+    // ashmap -> class
+    a = 100
+    var a;
+    b = 10;
+    let b;
+    console.log(b)
+    console.log(a)
+    var my_list = [];
+    my_list.push(1);
+    my_list.push("lavan");
+     my_list.push({
+        'name': 'lavan',
+        'gender': 'female'
+    });
+    my_list.push([
+        1,2,3
+    ]);
+    console.log(my_list);
+    console.log(my_list[2].name);
+    console.log(my_list[2]['name']);
+    const s = 1;
+    console.log('"hello world" is the first program to any language');
+    
+}
+
+function variables() {
+    // primitive
+        // Number
+        // String
+        // Boolean
+    // complex
+        // Object
+        // function
+    let a = 5; //local scope, but visible to inner snippets
+    {
+        let a;
+        console.log(a);
+    }
+    console.log(a);
+}
+
+function day3() {
+    var t = "vinu"; //1000
+    // t += "ramanan"; //1500
+    t = t + "ramanan"; //2000 -> t
+    if (1 == '1') {
+        console.log("string number");
+    }
+    if (1 === '1') {
+        console.log('triple =');
+    }
+    let g = 5 + "15"
+    // "advaith" < "vinu"  -> basically it will check the ascii value for each character and provides the greater one
+    // "ae" > "addd"
+    // "15" > "1000"
+    // let x = 15, y = "abc"
+    // if (x > y) {
+    //     console.log(x);
+    // }
+    // else {
+    //     console.log(y);
+    // }
+    let a = "vinu";
+    let b = {
+        k1: 'val1',
+        k2: 'val2'
+    }
+    let obj = null; // null object is different from object with no key/ values
+    // console.log(obj);
+    // if (obj === null) {
+    //     console.log('null')
+    // }
+    // if (obj === undefined) {
+    //     console.log('undefined');
+    // }
+    // console.log(typeof(a));
+    // console.log(b instanceof Object);
+    // console.log(typeof(variables));
+    function inner_func(first, second, ...a) {  
+        let s = 1;
+        console.log(first);
+        console.log(second);
+        for (let i = 0; i < a.length; i++) {
+            s *= a[i];
+        }
+        console.log(s);
+        console.log(typeof s);
+    }
+    // inner_func("vinu", "ramanan", 1,2,3,4,5);
+    function while_loop() {
+        console.log('while function')
+        let i = 0;
+        while (i < 5) {
+            console.log(i);
+            i++;
+        }
+    }
+    function do_while_loop() {
+        console.log('do while function')
+        let i = 0;
+        do {
+            console.log(i);
+            i--;
+        }while (i > 0)
+    }
+    function switch_case(what_to_execute) {
+
+        cases = {
+            'while':while_loop,
+            'do_while':do_while_loop,
+        }
+        if () {
+
+        }
+        else {
+            
+        }
+        cases[what_to_execute]()
+        console.log(typeof cases[what_to_execute])
+        console.log(cases[what_to_execute])
+    }
+    switch_case('vinu');
+    
+}
+
+</script>
+
